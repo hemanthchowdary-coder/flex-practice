@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Sample Layout</title>
+  <style>
+    /* Reset margins and set up a clean background */
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+    }
+
+    /* 1. FLEX CONTAINER */
+    .flex-container {
+      display: flex;                  /* Activates Flexbox */
+      flex-direction: row;            /* Places items horizontally next to each other */
+      justify-content: space-between; /* Distributes items with equal space between them */
+      align-items: center;            /* Centers items vertically within the container */
+      gap: 15px;                      /* Creates a gap between the boxes */
+      
+      background-color: #ffffff;
+      padding: 20px;
+      height: 250px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 2. FLEX ITEMS */
+    .flex-box {
+      flex: 1;                        /* Allows boxes to grow equally to fill the space */
+      height: 120px;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      
+      /* Bonus: We use flexbox here too just to center the text perfectly */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Distinct colors for each box */
+    .box-1 { background-color: #4f46e5; }
+    .box-2 { background-color: #06b6d4; }
+    .box-3 { background-color: #10b981; }
+  </style>
+</head>
+<body>
+
+  <!-- The parent container -->
+  <div class="flex-container">
+    <!-- The flexible items inside -->
+    <div class="flex-box box-1">Box 1</div>
+    <div class="flex-box box-2">Box 2</div>
+    <div class="flex-box box-3">Box 3</div>
+  </div>
+
+</body>
+</html>
